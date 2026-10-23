@@ -1,0 +1,25 @@
+[project]
+name = "trim-audio-silence"
+version = "0.1.0"
+description = "Remove silent gaps from MP3 files using ffmpeg"
+readme = "README.md"
+authors = [
+    { name = "muhammad farzad ali", email = "muhammad.farzad.ali@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+trim-silence = "trim_audio_silence.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
